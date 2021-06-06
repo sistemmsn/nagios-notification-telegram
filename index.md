@@ -1,7 +1,7 @@
 ## Scripts de notificación por telegram con grafica pnp4nagios
 
 
-Nagios Core solo viene con una estructura básica para alertas de correo electrónico basadas en texto plano. Estos scripts vienen con la  integración de PNP4Nagios, agrega visualización de problemas a las alertas y emojis.
+Nagios Core solo viene con una estructura básica para alertas de correo electrónico basadas en texto plano. Estos scripts para la mensajeria en telegram vienen con la  integración de PNP4Nagios, agrega visualización de problemas a las alertas y emojis.
 
 
 Ejemplo de notificación de servicio:
