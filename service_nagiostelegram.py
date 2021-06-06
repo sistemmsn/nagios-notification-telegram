@@ -143,7 +143,7 @@ srvurl =   str(pnp4nagios)+'image?host='+str(host.hostname)+'&srv='+str(host.ser
 
 #Download for img and user, passd
 file = '/usr/local/nagios/img/srvs.png'
-srvurl = requests.get(srvurl, auth=HTTPBasicAuth('nagiosadmin','systemahje'), stream=True)
+srvurl = requests.get(srvurl, auth=HTTPBasicAuth('nagiosadmin','123456'), stream=True)
 if srvurl.status_code == 200:
     with open(file, 'wb') as f:
         srvurl.raw.decode_content = True
