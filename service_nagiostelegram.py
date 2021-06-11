@@ -62,13 +62,13 @@ from pathlib import Path
 from requests.auth import HTTPBasicAuth
 
 
-#Historial de gráficos
+
 graph_history  = 12
 tstamp = time.time()
 elapse = graph_history * 3600
 start = graph_history - elapse
 end = tstamp
-# Url de tu pnp4nagios
+
 pnp4nagios = "http://192.5.212.249/pnp4nagios/"
 
 if os.path.exists("/usr/local/nagios/img/srvs.png"):
@@ -138,10 +138,8 @@ def main():
 
 host = parse_args()
 
-#Url for de  pnp4nagios services
 srvurl =   str(pnp4nagios)+'image?host='+str(host.hostname)+'&srv='+str(host.servicedesc)+'&view=0&source=0&start'+str(round(start,0)).replace('0','')+'&end='+str(round(end,0)).replace('.0','')
 
-#Download for img and user, passd
 file = '/usr/local/nagios/img/srvs.png'
 srvurl = requests.get(srvurl, auth=HTTPBasicAuth('nagiosadmin','123456'), stream=True)
 if srvurl.status_code == 200:
